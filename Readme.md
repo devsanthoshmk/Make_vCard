@@ -9,9 +9,9 @@
 
   ### Balance work:
   	
-  	[ ] Writing .vcf logic
-  	[ ] Combining tablib to .vcf to main.py
-  	[ ] Testing main.py
+  	[x] Writing .vcf logic
+  	[x] Combining tablib to .vcf to main.py
+  	[x] Testing main.py
   	[ ] Making front-end using beeware togo
   	[ ] Connecting them all
   	[ ] Distributing... as desktop app[linux,win,mac]
