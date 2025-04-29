@@ -167,7 +167,9 @@ class Contact:
                 else "",
                 "formatted_name": row[self.cols["formatted_name"]]
                 if self.cols["formatted_name"]
-                else row[self.cols["first_name"]] + self.cols["last_name"],
+                else row[self.cols["first_name"]] + (" " + row[self.cols["last_name"]])
+                if self.cols["last_name"]
+                else "",
                 "additional_names": row[self.cols["additional_names"]]
                 if self.cols["additional_names"]
                 else "",
