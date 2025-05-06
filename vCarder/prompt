@@ -1,0 +1,119 @@
+You are an expert BeeWare/Toga UI developer with a strong eye for modern, sleek cross-platform designs.
+
+Goal: Build only the frontend for a desktop/mobile app called vCarder (no business logic).
+
+Overall Layout
+
+    Main window title: “vCarder”
+
+    Menu bar with two menus:
+
+        File → “Open Source File…” (file chooser for .csv, .xlsx, .ods), “Exit”
+
+        Contact → “Email” “Phone” “Github” “Instagram” (hyperlinks)
+
+        Help → “About vCarder”
+
+        Provide a “Report!” button to report for any issues just ask email(validate this email) and their issue.
+
+    Footer bar at the bottom showing app version (e.g. “vCarder v0.1”) “Email” “Phone” “Github” “Instagram” (hyperlinks) and a copyright info.
+
+Primary Content Area (stacked vertically):
+
+    File Chooser
+
+        A button labeled “Choose Source File”
+
+        Opens a file dialog filtered to .csv, .xlsx, .ods
+
+    Data Preview Table (shows after the file is choosen)
+
+        Scrollable table (Toga Table in a ScrollContainer with a fixed height after that scrollable for width also same)
+
+        Populate with a dummy Python dict.
+
+    Field Mapping Section
+
+        Label: “Field Mapping”
+
+        Rows for each main parameter, each with:
+
+            Static label (e.g. “First Name”) → Dropdown listing all table columns, excluding any columns already mapped in earlier dropdowns or additional fields.
+
+
+        Order of fields:
+
+            First Name
+
+            Last Name
+
+            Full Name
+
+            Phone
+
+            Address
+
+            Email
+
+    Additional Fields Section
+
+        Label: “Additional”
+
+        A single Dropdown listing optional fields: “Additional Phone Number”, “Organization”, “Title”, “URL”, “Birthday”
+
+        Show them just like above, with the same exclusion logic (any column selected anywhere(including selected in forementioned feild) is removed from all future dropdowns).
+
+        
+
+    Action Button
+
+         “Get vCard” button (for now just print btn back pressed).
+
+Dynamic Exclusion Rule
+
+    Once a column is selected in any dropdown, it must no longer appear as an option in any subsequent dropdowns (both main and additional).
+
+    This ensures each vCard field maps to a unique source column.
+
+Styling & Behavior
+
+    Light/dark theme support (or prepare for it)
+
+    Consistent padding (12px+) and typography (title 20pt, headers 14–16pt)
+
+    All code in a single app.py, with a VCarderApp (or MainWindow) class building the UI in startup().
+
+Output Requirements
+
+    Full app.py with imports, app class, and app.main_loop().
+
+    Stub callbacks for file chooser, dropdown updates, and “Get vCard.”
+
+    Inline comments for each major widget/layout.
+
+    README snippet at top explaining how to run the app.
+
+Step-by-Step Generation
+
+    Step 1: Scaffold main window & menu bar
+
+    Step 2: Add file chooser widget
+
+    Step 3: Populate dummy data table
+
+    Step 4: Create Field Mapping with dynamic exclusion
+
+    Step 5: Implement Additional Fields section
+
+    Step 6: Add “Get vCard” button & footer
+
+    Step 7: Polish styling
+
+Tone & Style
+
+    Follow PEP 8, include docstrings
+
+    Use concise, descriptive comments
+
+    Wrap Toga snippets in Markdown code fences
+
